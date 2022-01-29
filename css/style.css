@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --fs-h1: 4rem;
+  --fs-h2: 2.8rem;
+  --fs-h3: 2rem;
+  --fs-body: 1.6rem;
+
+  --primary-col: rgb(37, 37, 37);
+  --secondary-col: rgb(231, 97, 56);
+  --accent-col: #fff;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+p {
+  font-size: var(--fs-body);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.4;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--primary-col);
+  height: 8rem;
+}
+
+.logo {
+  color: var(--accent-col);
+}
+
+i {
+  color: var(--accent-col);
+  font-size: var(--fs-h3);
+}
+
+.button__add-icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+i:hover {
+  color: var(--secondary-col);
+}
+
+/*  cards */
+.card-container {
+  display: grid;
+  gap: 3rem;
+  padding: 3rem;
+}
+
+.card__one,
+.card__two,
+.card__three {
+  height: 20rem;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 2px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 10px 0px;
+}
+
+.card__body {
+  margin: 5rem 0 1rem 1rem;
+}
+
+/* Grid */
+.grid__1x3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* buttons */
+.btn {
+  background-color: var(--secondary-col);
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 1px solid var(--secondary-col);
+  color: var(--secondary-col);
+}
+
+.card__btn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+}
