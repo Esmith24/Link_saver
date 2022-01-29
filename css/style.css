@@ -9,12 +9,14 @@
 :root {
   --fs-h1: 4rem;
   --fs-h2: 2.8rem;
-  --fs-h3: 2rem;
+  --fs-h3: 2.4rem;
   --fs-body: 1.6rem;
 
   --primary-col: rgb(37, 37, 37);
-  --secondary-col: rgb(231, 97, 56);
-  --accent-col: #fff;
+  --secondary-col: #fc575e;
+  --light-accent-col: #f0f1f5;
+  --dark-accent-col: #333;
+  --fc-primary: #555;
 }
 
 h1 {
@@ -36,9 +38,17 @@ html {
 
 body {
   line-height: 1.4;
+  color: var(--fc-primary);
+  background-color: var(--light-accent-col);
 }
 
+a {
+  text-decoration: none;
+}
+
+/* --------------------------*/
 /* Header */
+/*---------------------------*/
 
 header {
   display: flex;
@@ -49,19 +59,12 @@ header {
 }
 
 .logo {
-  color: var(--accent-col);
+  color: var(--light-accent-col);
 }
 
 i {
-  color: var(--accent-col);
+  color: var(--light-accent-col);
   font-size: var(--fs-h3);
-}
-
-.button__add-icon {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 1rem;
 }
 
 i:hover {
@@ -70,48 +73,60 @@ i:hover {
 
 /*  cards */
 .card-container {
-  display: grid;
-  gap: 3rem;
-  padding: 3rem;
+  padding: 4rem;
 }
 
-.card__one,
-.card__two,
-.card__three {
-  height: 20rem;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 2px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 10px 0px;
+/* --------------------------*/
+/* form */
+/*---------------------------*/
+
+.panel {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px 2px rgb(100, 99, 99);
+  height: 27rem;
+  padding: 4rem 2rem;
+  margin: 1rem;
 }
 
-.card__body {
-  margin: 5rem 0 1rem 1rem;
+.link-heading {
+  margin: 1.5rem 0;
 }
 
-/* Grid */
-.grid__1x3 {
-  grid-template-columns: 1fr 1fr 1fr;
+.panel__input {
+  display: block;
+  border-radius: 5px;
+  border: 1px solid var(--fc-primary);
+  padding: 0.5rem 0.5rem;
+  margin: 1rem 0;
+  width: 100%;
+  font-size: 1.4rem;
 }
 
-/* buttons */
-.btn {
-  background-color: var(--secondary-col);
-  color: #fff;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  cursor: pointer;
-}
+/* --------------------------*/
+/* Buttons */
+/*---------------------------*/
 
-.btn:hover {
-  background-color: transparent;
+input[type="submit"],
+button {
+  padding: 0.8rem 2.2rem;
+  border-radius: 5px;
   border: 1px solid var(--secondary-col);
-  color: var(--secondary-col);
+  background-color: var(--secondary-col);
+  color: var(--light-accent-col);
+  font-size: 1.6rem;
 }
 
-.card__btn {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  padding-right: 1rem;
-  padding-top: 1rem;
+input[type="submit"]:hover,
+button:hover {
+  cursor: pointer;
+  color: var(--secondary-col);
+  background: white;
+}
+
+.button__add-icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
 }

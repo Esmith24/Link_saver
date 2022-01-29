@@ -15,44 +15,32 @@
 <body>
     <header>
         <h1 class="logo">Link Saver</h1>
-        <button class="button__add-icon"><i class="fas fa-plus"></i></button>
+        <button class="button__add-icon" id="addBtn"><i class="fas fa-plus"></i></button>
     </header>
 
     <main>
-        <div class="card-container grid__1x3">
-            <div class="card__one">
-                <div class="card__btn">
-                    <button class="btn">Edit</button>
-                    <button class="btn">Delete</button>
-                </div>
-                <div class="card__body">
-                    <h2>Whatever</h2>
-                    <p>01/01/2020</p>
-                    <h3>Categories:</h3>
-                </div>
+        <div class="card-container">
+
+            <div class="panel" id="addLinkPanel">
+                <h3 class="link-heading">Add Link</h3>
+                <form id="addLinkForm">
+                    <input class="panel__input" name="title" id="linkTitle" type="text" placeholder="Title">
+                    <input class="panel__input" name="url" id="linkUrl" type="text" placeholder="Url">
+                    <input class="panel__input" name="category" id="linkCategorory" type="text"
+                        placeholder="Categories (comma seperated)">
+                    <div id="addedCategories">
+
+                    </div>
+
+                    <input type="submit" id="submitButton" value="Submit"></input>
+                    <input type="submit" id="cancelButton" value="Cancel"></input>
+                </form>
             </div>
-            <div class="card__two">
-                <div class="card__btn">
-                    <button class="btn">Edit</button>
-                    <button class="btn">Delete</button>
-                </div>
-                <div class="card__body">
-                    <h2>Whatever</h2>
-                    <p>01/01/2020</p>
-                    <h3>Categories:</h3>
-                </div>
+
+            <div id="linksList">
+
             </div>
-            <div class="card__three">
-                <div class="card__btn">
-                    <button class="btn">Edit</button>
-                    <button class="btn">Delete</button>
-                </div>
-                <div class="card__body">
-                    <h2>Whatever</h2>
-                    <p>01/01/2020</p>
-                    <h3>Categories:</h3>
-                </div>
-            </div>
+
         </div>
     </main>
 
